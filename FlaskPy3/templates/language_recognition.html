@@ -1,0 +1,16 @@
+{% extends "index.html" %}
+
+{% block body %}
+<p>Paste in some source code and a classification model will determine which language it is.
+The model has been trained to differentiate Python, JavaScript, and C++.
+</p>
+<form method="POST">
+    <textarea wrap="hard" rows="30" cols="50" type="text" name="entry" value=""></textarea>
+    <br>
+    <button class="button_input" type="submit" name="submit_button">Check code</button>
+</form>
+{% if determination %}
+<p>My guess: your programming language is</p>
+<h2>{{ determination }}</h2>
+{% endif %}
+{% endblock %}

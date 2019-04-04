@@ -1,0 +1,53 @@
+{% block layout %}
+<style type="text/css">  
+    @font-face {
+        font-family: "Baskerville";
+        src: url("{{ url_for('static', filename='LibreBaskerville-Regular.ttf') }}") format("truetype");
+    }
+    @font-face {
+      font-family: "Frutiger";
+      src: url("{{ url_for('static', filename='Frutiger.ttf') }}") format("truetype");
+    }</style>
+    <script type="text/javascript" src="{{ url_for('static', filename='code.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <h1 style="margin:10px;padding:0px;display:inline;"><b>SyntaxML</b></h1><p style="display:inline;margin:0px;padding:0px;line-height:0px;">AI + Code Playground</p>
+<a href="/" class="nav" style="display:inline;">Home</a>
+<a href="/word2code" class="nav" style="display:inline;">word2code</a>
+<a href="/language_recognition" class="nav" style="display:inline;">Language Recognition</a>
+
+<hr>
+{% endblock %}
+{% block body %}
+<h1>How does Artificial Intelligence and code interact?</h1>
+<p>Machine Learning is made possible by increasing access to valuable data and compute.
+  There has <a href="http://learnbigcode.github.io/">been</a><a href="https://sourced.tech/">a</a><a href="http://www.msrconf.org/">growing</a><a href="https://mast-group.github.io/">interest</a>in 
+  the field to explore how AI may interface with source code to either refine existing code or augment 
+  the capabilities of a programmer.
+  
+  This site is a place to play with small-scale demos of programs inspired by this field of research.
+  <br><br>
+  <h2>word2code</h2>
+  <p>word2code uses the <a href="https://radimrehurek.com/gensim/models/word2vec.html">word2vec</a> 
+  pre-trained weights to classify labeled code snippets in response to a natural
+  language query. Using the pre-trained word2vec model simplified the implementation of the NLP classification.</p>
+  <br>
+  <h2>Language Recognition</h2>
+  <p>Using statistical classification, it is possible to determine the programming language of a given
+    segment of source code. This is done through analyzing the frequency of different syntactical
+    structures. We classified the source code of cpython, jquery, and gcc's c++ library to find the
+    frequency of certain keywords. Here are our frequency files for <a href="/py">Python</a>,
+    <a href="js">JavaScript</a>, and <a href="cpp">C++</a>.
+  </p>
+</p>
+<br>
+<img src="https://raw.githubusercontent.com/eisenjulian/nlp_estimator_tutorial/master/embeddings.gif" alt="SupML" style="max-width: 300px; padding-left:300px ; max-height: 200px;"> 
+<div style ="text-align: center;"><p>A depiction of associations between word2vec nodes.<br><i>(https://github.com/eisenjulian/nlp_estimator_tutorial)</i></p></div>
+<br><br>
+<div style="display: inline-flex; justify-content: space-between; align-content: center;">
+<a href = "https://cloud.google.com/"><img src="https://www.datocms-assets.com/2885/1513617132-google-cloud.svg" alt="Google Cloud" style="max-width: 200px; padding-right: 50px; max-height: 200px;"></a>
+<a href = "https://www.python.org/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1024px-Python-logo-notext.svg.png" alt="Python" style="max-height: 100px; max-width: 200px;padding-right: 50px;"></a>
+<a href = "https://www.crummy.com/software/BeautifulSoup/"><img src="https://funthon.files.wordpress.com/2017/05/bs.png?w=1200" alt="BeautifulSoup" style="max-width: 210px;padding-right: 50px; max-height: 150px;"></a>
+<a href = "http://flask.pocoo.org/"><img src="https://cdn-images-1.medium.com/max/438/1*0G5zu7CnXdMT9pGbYUTQLQ.png" alt="Flask" style="max-width: 200px; max-height: 150px;"></a>
+</div>
+{% endblock %}
+<hr>

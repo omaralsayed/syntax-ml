@@ -1,0 +1,192 @@
+/* Prevent scroll bar from moving page */
+html {
+    overflow-y: scroll;
+}
+/* Viewport Sizing */
+.nav {
+    max-width: 900px;
+    margin: auto;
+    padding-top: 10px;
+}
+body {
+    max-width: 900px;
+    margin: auto;   
+    padding:3px;
+}
+/* Search Bar / Measure Entry */
+input.text_input {
+    border: 1px solid gray;
+    border-radius: 3px 3px 3px 3px;
+    width:200px;
+    font-family: Frutiger;
+    font-size:0.9em;
+    height:1.8em;
+    padding-left:0.45em;
+    transition: 0.2s ease-in-out;
+    margin:0px;
+    line-height:0px;
+    margin-bottom: 0.275em;
+    margin-top: 0.275em;
+}
+input.text_input:focus {
+    box-shadow: 0em 0em 0.175em 0.175em rgba(0, 132, 184, 0.200);
+    outline: none;
+}
+/* Search Button / Measure Button */
+button.button_input {
+    border: 1px solid gray;
+    background-color:rgb(0, 132, 184);
+    color:white;
+    border-radius: 3px 3px 3px 3px;
+    font-family: Frutiger;
+    font-size:0.9em;
+    height:2.1em;
+    padding-left:0.45em;
+    margin-left:0px;
+    margin-bottom: 0.275em;
+}
+button.button_input:hover {
+    cursor:pointer;
+}
+button.button_input:focus {
+    outline: none;
+    border:1px solid lightgray;
+    background-color:lightgray;
+}
+/* Measure Dropdown */
+select.select_input {
+    border: 1px solid gray;
+    background-color:white;
+    color:black;
+    border-radius: 3px 3px 3px 3px;
+    font-family: Frutiger;
+    font-size:0.9em;
+    height:2.1em;
+    padding-left:0.45em;
+    margin-left:0px;
+}
+select.select_input:hover {
+    cursor:pointer;
+}
+/* Search Results */
+a.result {
+    margin-left:20px;
+}
+
+h1 {
+    font-family: Baskerville;
+    font-size:1.3em;
+    margin:0px;
+    padding:0px;
+}
+h2 {
+    font-family: Baskerville;
+    font-size:1em;
+    margin:0px;
+    padding:0px;
+}
+p {
+    font-family: Frutiger;
+    font-size:1em;
+    margin:0px;
+    padding:0px;
+}
+p.footer {
+    margin-bottom: 5px;
+}
+li {
+    display:inline;
+    padding-right:10px;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+hr {
+    border-top: dotted 1px;
+    color:lightgray;
+    clear:both;
+}
+a {
+    font-family: Frutiger;
+    padding:2px;
+    border-radius: 3px 3px 3px 3px;
+}
+a.nav {
+    margin-left:20px;
+    padding:10px;
+    font-size: 1.5em;
+    height:20px;
+    border-radius: 6px 6px 0 0;
+}
+a:link {
+    color: rgb(0, 132, 184);
+}
+  
+  /* visited link */
+  a:visited {
+    color: rgb(0, 132, 184);
+}
+  
+  /* mouse over link */
+  a:hover {
+    color: rgb(0, 132, 184);
+    background-color:rgba(0, 132, 184, 0.100)
+}
+  
+  /* selected link */
+  a:active {
+    color: rgb(0, 132, 184);
+}
+/* TABLES */
+th, td {
+    font-family:Frutiger;
+}
+table {
+    border-collapse: collapse;
+    border: 1px solid lightgray;
+    min-width:350px;
+    margin-bottom: 5px;
+}
+tr:nth-child(even) {
+    background-color:lightgray;
+}
+tr:nth-child(odd) {
+    background-color: white;
+}
+/* COLLAPSIBLE RESULTS */
+.collapsible {
+    cursor:pointer;
+}
+.collapsible_food_display {
+    overflow:hidden;
+    transition:max-height 0.2s ease-out;
+}
+div.nutrition_information_container_left {
+    float:left;
+    display:block;
+    clear:left;
+}
+div.nutrition_information_container_right {
+    float:right;
+    display:block;
+    clear:right;
+}
+div.progress {
+    vertical-align: center;
+    height:15px;
+    width:150px;
+    padding:3px; margin:0px;
+}
+div.progress-bar {
+    border-radius: 3px 3px 3px 3px;
+}
+@media only screen and (max-width:725px) {
+    div.nutrition_information_container_left {
+        float:none;
+    }
+    div.nutrition_information_container_right {
+        float:none;
+    }
+}

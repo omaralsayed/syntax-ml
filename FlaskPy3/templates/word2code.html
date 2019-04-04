@@ -1,0 +1,23 @@
+{% extends "index.html" %}
+
+{% block body %}
+<p>Enter a simple request in plain English to be converted into simple code.
+<br>You may specify one of three languages: Python, JavaScript, or C++.
+<br>Example: <b>Create a for loop</b>
+</p>
+<form method="POST">
+    <select class="select_input" name="language">
+        <option value='python'>Python</option>
+        <option value='c++'>C++</option>
+        <option value='javascript'>JavaScript</option>
+    </select>
+    <input class="text_input" name="entry" value="">
+    <button class="button_input" type="submit" name="submit_button">Generate code</button>
+</form>
+{% if nearest %}
+<div class="box"><h2>Generated Code</h2></div>
+{% for line in nearest %}
+<p>{{ line }}</p>
+{% endfor %}
+{% endif %}
+{% endblock %}
